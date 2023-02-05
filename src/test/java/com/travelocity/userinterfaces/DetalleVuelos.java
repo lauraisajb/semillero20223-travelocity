@@ -7,11 +7,13 @@ public class DetalleVuelos {
     public static final Target IN_ORIGEN = Target.the("input de origen").locatedBy("//input[@id='location-field-leg1-origin']");
     public static final Target BUT_DESTINO = Target.the("button de destino").locatedBy("//button[@data-stid='location-field-leg1-destination-menu-trigger']");
     public static final Target IN_DESTINO = Target.the("input de destino").locatedBy("//input[@id='location-field-leg1-destination']");
-    public static final Target SELECT_DATE_REGRESO = Target.the("selector de fecha regreso").locatedBy("//button[@id='d2-btn']");
-    public static final Target DATE_REGRESO = Target.the("calendar fecha regreso").locatedByFirstMatching("//button[@data-day='17']");
+    public static final Target SELECT_DATE_SALIDA = Target.the("selector de fecha salida").locatedBy("//button[@id='d1-btn']");
+    public static final Target DATE_SALIDA = Target.the("calendar fecha regreso").locatedBy("//button[@data-day='14']");
+    public static final Target DATE_REGRESO = Target.the("calendar fecha regreso").locatedBy("//button[@data-day='21']");
     public static final Target BUT_BUSCAR = Target.the("boton buscar vuelos").locatedBy("//button[@data-testid='submit-button']");
     public static final Target BUT_LISTO_DATE = Target.the("boton listo date vuelos").locatedBy("//button[@data-stid='apply-date-picker']");
     public static final Target SELECT_CLASE = Target.the("seleccionar clase de vuelo").locatedBy("//button[@data-testid='preferred-class-input-trigger']");
     public static final Target SELECT_CLASE_PREMIUM =Target.the("seleccion clase de vuelo premium").locatedBy("//*[text()[contains(.,'Clase económica Premium')]]");
     public static final Target SELECT_HOSPEDAJE =Target.the("seleccion agregar hospedaje").locatedBy("//input[@name='add-hotel-checkbox']");
+    public static final Target SELECT_AUTO =Target.the("seleccion agregar hospedaje").locatedBy("//input[@name='add-car-checkbox']");
 }

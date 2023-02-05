@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features/vuelos/vuelos_redondos.feature",
-        glue = {"com.travelocity.stepdefinitions"}
+        glue = {"com.travelocity.stepdefinitions"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class VuelosRedondosRunner {}

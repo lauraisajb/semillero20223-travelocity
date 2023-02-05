@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features/hospedaje/hospedaje.feature",
-        glue = {"com.travelocity.stepdefinitions"}
+        glue = {"com.travelocity.stepdefinitions"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class HospedajeRunner {}
+public class ReservaHospedajeRunner {}

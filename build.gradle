@@ -6,7 +6,7 @@ plugins {
 }
 
 defaultTasks 'clean','test','aggregate'
-
+compileJava.options.encoding = 'UTF-8'
 repositories {
     mavenCentral()
 }
@@ -41,8 +41,12 @@ test {
     maxParallelForks = Runtime.runtime.availableProcessors() - 1
     systemProperties System.getProperties()
 }
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 
 gradle.startParameter.continueOnFailure = true
 
 test.finalizedBy(aggregate)
+

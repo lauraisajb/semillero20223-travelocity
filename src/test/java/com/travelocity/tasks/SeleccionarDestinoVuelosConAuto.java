@@ -10,11 +10,11 @@ import org.openqa.selenium.Keys;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SeleccionarDestinoVuelosClase implements Task {
+public class SeleccionarDestinoVuelosConAuto implements Task {
     private String destino;
     private Integer diasViaje;
 
-    public SeleccionarDestinoVuelosClase(String destino, Integer diasViaje){
+    public SeleccionarDestinoVuelosConAuto(String destino, Integer diasViaje){
         this.destino = destino;
         this.diasViaje = diasViaje;
     }
@@ -24,18 +24,17 @@ public class SeleccionarDestinoVuelosClase implements Task {
         actor.attemptsTo(
                 Click.on(DetalleVuelos.BUT_DESTINO),
                 Enter.theValue(this.destino).into(DetalleVuelos.IN_DESTINO).thenHit(Keys.ENTER),
-                Click.on(DetalleVuelos.SELECT_CLASE),
-                Click.on(DetalleVuelos.SELECT_CLASE_PREMIUM),
                 Click.on(DetalleVuelos.SELECT_DATE_SALIDA),
                 Click.on(DetalleVuelos.DATE_SALIDA),
                 Click.on(DetalleVuelos.DATE_REGRESO),
                 Click.on(DetalleVuelos.BUT_LISTO_DATE),
+                Click.on(DetalleVuelos.SELECT_AUTO),
                 Click.on(DetalleVuelos.BUT_BUSCAR)
         );
     }
 
-    public static Performable destinoYDiasEconomicoPremium (String destino, Integer diasViaje){
-        return instrumented(SeleccionarDestinoVuelosClase.class, destino, diasViaje);
+    public static Performable destinoYDiasVuelosConAuto (String destino, Integer diasViaje){
+        return instrumented(SeleccionarDestinoVuelosConAuto.class, destino, diasViaje);
     }
 }
 

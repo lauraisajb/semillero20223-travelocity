@@ -5,7 +5,7 @@ Característica: Realizar logueo y cerrar sesion en travelocity
   @manual
   Escenario: Inicio de sesion en travelocity
     Dado que Laura accedera a su cuenta en travelocity
-    Cuando ingresa su informacion de acceso  "lauraisa1298@hotmail.com" y contrasena "shinoaburame1298*"
+    Cuando ingresa su informacion de acceso  "" y contrasena ""
     Entonces debe verse el nombre de "Laura"
 
   @manual
